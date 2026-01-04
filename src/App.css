@@ -1,0 +1,48 @@
+.main_container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  
+}
+.lang_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Places it at the top right */
+  padding: 15px;
+  gap: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lang_label {
+  font-size: 14px;
+  color: #f7f4f4;
+  margin: 0;
+}
+
+.lang_btn {
+  background: white;
+  border: 2px solid #ffb7c5; /* Cherry blossom pink */
+  color: #ff4d6d;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(255, 183, 197, 0.3);
+}
+
+.lang_btn:hover {
+  background: #ff4d6d;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.lang_btn:active {
+  transform: translateY(1px);
+}

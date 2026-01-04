@@ -1,0 +1,99 @@
+.appu_container {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    color: #fff;
+
+}
+
+.appu_control {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.appu_control>button {
+    font: 1em sans-serif;
+
+}
+
+.button_yes {
+    padding: 5px 20px;
+    background: #3adb09;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.button_no {
+    padding: 5px 20px;
+    background: #d63838;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    z-index: 1000
+
+}
+
+.button_yes:hover {
+    background: #2ead07;
+}
+
+.button_no:hover {
+    background: #b90909;
+}
+.insta_heart {
+   position: absolute;
+    /* Use translate to keep it perfectly centered */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    /* Using a "back" cubic-bezier gives it that bouncy Instagram feel */
+    animation: heartPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes heartPop {
+    0% {
+        /* Start small and below center */
+        transform: translate(-50%, -20%) scale(0);
+        opacity: 0;
+    }
+    30% {
+        /* Pop up and grow large */
+        transform: translate(-50%, -60%) scale(.4);
+        opacity: 1;
+    }
+    50% {
+        /* Slight shrink for the "bounce" */
+        transform: translate(-50%, -55%) scale(.2);
+        opacity: 1;
+    }
+    100% {
+        /* Fade out while floating upward */
+        transform: translate(-50%, -100%) scale(.1);
+        opacity: 0;
+    }
+}
+
+/* Button "Squish" effect when clicked */
+.button_yes.clicked {
+    transform: scale(0.9);
+    background-color: #ff3040; /* Instagram red/pink */
+    transition: transform 0.1s;
+}
