@@ -1,4 +1,4 @@
-import React,{useContext, useRef,useState} from 'react'
+import {useContext} from 'react'
 import './Appu.css'
 import { LocaleContext } from '../App'
 import { useNavigate } from 'react-router-dom'

@@ -9,9 +9,10 @@ import Appu3 from './components/Appu3'
 import Appu4 from './components/Appu4'
 import Appu5 from './components/Appu5'
 import Appu6 from './components/Appu6'
-import Apputhanks from './components/Apputhanks'
+import AppuThanks from './components/AppuThanks'
 import { createContext } from 'react'
 import{contentsite} from './util/content'
+
 
 export const LocaleContext = createContext();
 function App() {
@@ -46,7 +47,7 @@ const content = contentsite[currentLocale];
           <Route path='/appu5' element={<Appu4 />}></Route>
           <Route path='/appu6' element={<Appu5 />}></Route>
           <Route path='/appu7' element={<Appu6 />}></Route>
-          <Route path='/appu8' element={<Apputhanks/>}></Route>
+          <Route path='/appu8' element={<AppuThanks/>}></Route>
         </Routes>
       </Router>
 
